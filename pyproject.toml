@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "lesson-14-magic-dander"
+version = "0.1.0"
+description = ""
+authors = ["Saysuu <skysaika@yandex.ru>"]
+readme = "README.md"
+packages = [{include = "lesson_14_magic_dander"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
