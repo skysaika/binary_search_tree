@@ -8,6 +8,8 @@ packages = [{include = "lesson_14_magic_dander"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+pytest = "^7.2.2"
+pytest-cov = "^4.0.0"
 
 
 [build-system]
