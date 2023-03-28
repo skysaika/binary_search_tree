@@ -34,9 +34,7 @@ class BinarySearchTree:
 
     def search(self, post_id: int) -> dict:
         """Ищем и возвращаем словарь с данными о посте по его id."""
-        if self.__root is None:
-            return None
-        else:
+        if self.__root is not None:
             return self._search_recursively(self.__root, post_id)
 
     def _search_recursively(self, node: Node, post_id: int) -> dict | None:
@@ -44,14 +42,9 @@ class BinarySearchTree:
         if post_id == node.data['id']:
             return node.data
 
-        if post_id < node.data['id']:
-            if node.left is None:
-                return None
-            else:
-                return self._search_recursively(node.left, post_id)
+        if post_id < node.data['id'] and node.left is not None:
+            return self._search_recursively(node.left, post_id)
 
-        if post_id > node.data['id']:
-            if node.right is None:
-                return None
-            else:
-                return self._search_recursively(node.right, post_id)
+        if post_id > node.data['id'] and node.right is not None:
+            return self._search_recursively(node.right, post_id)
+
