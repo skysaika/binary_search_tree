@@ -1,5 +1,6 @@
 from src.node import Node
 
+
 def test_node_init():
     """Проверяем, что объект Node ининциализируется правильно"""
     data = {'id': 40}
